@@ -1,0 +1,15 @@
+﻿<Window x:Name="window_Solution" x:Class="WPF_SimpleCalculator.SolutionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SimpleCalculator"
+        mc:Ignorable="d"
+        Title="SolutionWindow" Height="350" Width="500" Loaded="window_Solution_Loaded">
+    <Grid Background="#FFDBEDFF">
+        <Label x:Name="lbl_SolutionTitle" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" FontSize="20" FontWeight="Light" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="White" Panel.ZIndex="2" Content="Solution" BorderBrush="Black" BorderThickness="0,1"/>
+        <Label x:Name="lbl_Solution" Content="Solution" HorizontalAlignment="Stretch" Margin="0,-50,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" Background="{x:Null}"/>
+        <Label x:Name="lbl_Formula" Content="" HorizontalAlignment="Stretch" Margin="0,50,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="14"/>
+        <Button x:Name="btn_Close" Content="Close" HorizontalAlignment="Center" Margin="0,220,0,0" Width="100" Background="#FF73A8FF" Height="50" FontSize="14" BorderThickness="2" BorderBrush="#FF4286F4" Foreground="White" Click="btn_Close_Click"/>
+    </Grid>
+</Window>

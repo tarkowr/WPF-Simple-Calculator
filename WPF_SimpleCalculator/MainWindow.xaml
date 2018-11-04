@@ -1,0 +1,44 @@
+﻿<Window x:Name="window_Main" x:Class="WPF_SimpleCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SimpleCalculator"
+        mc:Ignorable="d"
+        Title="Trig Calculator" Height="428.75" Width="830">
+    <Grid Background="#FFDBEDFF" Margin="0,0,0,0">
+        <Label Content="Trig Calculator" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontSize="24" FontWeight="Thin" Background="White" Height="50" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,1"/>
+        <Image HorizontalAlignment="Left" Height="248" Margin="38,97,0,0" VerticalAlignment="Top" Width="202" Source="Media/image.png" Panel.ZIndex="2"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="295" Margin="26,73,0,0" VerticalAlignment="Top" Width="228" Background="White"/>
+        <GroupBox x:Name="groupBox_KnownValues" Header="Known Values" HorizontalAlignment="Left" Height="60" Margin="291,73,0,0" VerticalAlignment="Top" Width="300" BorderBrush="Black" FontSize="14">
+            <Grid HorizontalAlignment="Left" Height="31" Margin="0,0,-4,-3" VerticalAlignment="Top" Width="292">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="radioBox_AB" Content="A &amp; B" HorizontalAlignment="Left" Margin="12,7,0,0" VerticalAlignment="Top" Height="15" Width="85" IsChecked="True" Click="radioBox_AB_Click"/>
+                <RadioButton x:Name="radioBox_AC" Content="A &amp; C" HorizontalAlignment="Left" Margin="102,7,0,0" VerticalAlignment="Top" Height="15" Width="85" Click="radioBox_AC_Click"/>
+                <RadioButton x:Name="radioBox_BC" Content="B &amp; C" HorizontalAlignment="Left" Margin="192,7,0,0" VerticalAlignment="Top" Height="15" Width="85" Click="radioBox_BC_Click"/>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="lbl_Val1" Content="A (units)" HorizontalAlignment="Left" Margin="291,150,0,0" VerticalAlignment="Top" Height="30" Width="75" Background="{x:Null}" FontSize="14"/>
+        <Label x:Name="lbl_Val2" Content="B (units)" HorizontalAlignment="Left" Margin="291,185,0,0" VerticalAlignment="Top" Height="30" Width="75" FontSize="14"/>
+        <TextBox x:Name="txtBox_Val1" HorizontalAlignment="Left" Height="30" Margin="371,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="14" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtBox_Val2" HorizontalAlignment="Left" Height="30" Margin="371,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="14" VerticalContentAlignment="Center"/>
+        <CheckBox x:Name="checkBox_Formula" Content="Show Formula" HorizontalAlignment="Left" Margin="291,220,0,0" VerticalAlignment="Top" Height="30" Width="150" VerticalContentAlignment="Center" FontSize="14" IsChecked="True"/>
+        <GroupBox Header="Output" HorizontalAlignment="Left" Height="60" Margin="291,250,0,0" VerticalAlignment="Top" Width="135" BorderBrush="Black" FontSize="14"/>
+        <Grid HorizontalAlignment="Left" Height="39" Margin="291,269,0,0" VerticalAlignment="Top" Width="129">
+            <RadioButton x:Name="radioBtn_Val" Content="C" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" FontSize="14" IsChecked="True"/>
+            <RadioButton x:Name="radioBtn_ValSq" Content="C^2" HorizontalAlignment="Left" Margin="74,11,0,0" VerticalAlignment="Top" FontSize="14"/>
+        </Grid>
+        <Button x:Name="btn_Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="291,326,0,0" VerticalAlignment="Top" Width="130" Height="42" Background="#FF73A8FF" Foreground="White" FontSize="14" Click="btn_Calculate_Click" BorderThickness="2" BorderBrush="#FF4286F4"/>
+        <Button x:Name="btn_Help" Content="Help" HorizontalAlignment="Left" Margin="441,326,0,0" VerticalAlignment="Top" Width="95" Height="42" Click="btn_Help_Click"/>
+        <Button x:Name="btn_Clear" Content="Clear" HorizontalAlignment="Left" Margin="556,326,0,0" VerticalAlignment="Top" Width="95" Height="42" Click="btn_Clear_Click"/>
+        <Button x:Name="btn_Close" Content="Close" HorizontalAlignment="Left" Margin="671,326,0,0" VerticalAlignment="Top" Width="95" Height="42" Click="btn_Close_Click"/>
+        <Label x:Name="lbl_Error1" Content="" HorizontalAlignment="Left" Margin="551,150,0,0" VerticalAlignment="Top" Height="30" Foreground="#FF0068FF"/>
+        <Label x:Name="lbl_Error2" Content="" HorizontalAlignment="Left" Margin="551,185,0,0" VerticalAlignment="Top" Height="30" Foreground="#FF0068FF"/>
+
+
+
+    </Grid>
+</Window>
